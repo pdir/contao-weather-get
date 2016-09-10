@@ -15,10 +15,16 @@
 /**
  * Back end modules
  */
-$GLOBALS['TL_LANG']['MOD'][''] = array('', '');
+
+$GLOBALS['TL_LANG']['MOD']['WeatherGETid'] = array('Weather Modul','You can choose which weather request should be displayed');
+$GLOBALS['TL_LANG']['tl_module']['weather_legend'] ="Choose weather module";
 
 
+
+
+$GLOBALS['TL_LANG']['MOD']['WeatherGET'] = array("Weather","Request weather data");
 /**
  * Front end modules
  */
-$GLOBALS['TL_LANG']['FMD'][''] = array('', '');
+$GLOBALS['TL_LANG']['FMD']['WeatherShow'] = array('Weather modul', 'Weather modul');
+
