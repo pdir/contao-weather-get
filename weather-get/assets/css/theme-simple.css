@@ -1,0 +1,35 @@
+.weatherday {
+	display:inline-block;
+	padding:20px;
+	text-align: center;
+}
+.weatherday .icon{
+	padding:15px 0px;
+}
+.weather-block {
+	text-align: center
+}
+.weather-block .copyright{
+	text-align: right;
+	padding-right:25px;
+	padding-bottom:10px;
+}
+.weather-block .copyright a{
+	color:#444;
+	text-decoration: none;
+	font-size:0.7em;
+}
+.weather-block .main-info{
+	display:inline-block;
+	width:150px;
+}
+.weather-block .extra-info{
+	display:inline-block;
+	width:200px;
+	text-align: left;
+	vertical-align: top;
+	font-size:0.8em;
+}
+.weather-block .smallertemp{
+	font-size:0.8em;
+}
