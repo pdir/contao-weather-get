@@ -20,9 +20,7 @@
 	"replace": {
 		"contao-legacy/weatherGET": "self.version"
 	},
-    "conflict": {
-		"contao/core": "3.*"
-	},
+    
 	
 	"extra":{
 		"contao": {
