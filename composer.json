@@ -20,7 +20,7 @@
 	"replace": {
 		"contao-legacy/weatherGET": "self.version"
 	},
-    
+
 	
 	"extra":{
 		"contao": {
@@ -31,10 +31,6 @@
 				"runonce/logger.php"
 			]
 		},
-		"branch-alias": {
-			"dev-master": "0.8.x-dev"
-		}
-	},
-	"prefer-stable": true,
-	"minimum-stability": "dev"
+
+	}
 }
