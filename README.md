@@ -1,4 +1,6 @@
-Composer demo
+
+Contao Weather Extension
 =============
 
-This is a demo extension for the contao composer integration.
+Using one of multiple weather providers you can display the weather on your site
+
