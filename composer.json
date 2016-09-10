@@ -14,7 +14,7 @@
 	],
 	"require":{
 		"php":">=5.3",
-		"contao/core":">=3.5,<4",
+		"contao/core":">=3.5.1,<4.2",
 		"contao-community-alliance/composer-plugin": "~2.0"
 	},
 	"replace": {
@@ -23,12 +23,7 @@
     "conflict": {
 		"contao/core": "3.*"
 	},
-	"autoload":{
-		"classmap":["src/"],
-		"psr-0": {
-			"cnajjar\\WeatherGET": "src/"
-		}
-	},
+	
 	"extra":{
 		"contao": {
 			"sources":{
@@ -39,7 +34,7 @@
 			]
 		},
 		"branch-alias": {
-			"dev-master": "1.0.x-dev"
+			"dev-master": "0.8.0 rc1"
 		}
 	}
 }
