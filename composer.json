@@ -1,5 +1,5 @@
 {
-	"name":"cnajjar/Weather-get",
+	"name":"cnajjar/weather-get",
 	"description":"Contao extension for displaying weather using yahoo / openweathermap / forecast.io ",
 	"keywords":["contao", "composer","weather","wetter","yahoo weather","openweathermap","forecast.io"],
 	"type":"contao-module",
