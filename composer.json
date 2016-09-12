@@ -30,10 +30,8 @@
 			"runonce":[
 				"runonce/logger.php"
 			]
-		},
-		"branch-alias": {
-			"stable": "0.8.0-stable"
 		}
+		
 	},
 	"prefer-stable": true,
 	"minimum-stability": "dev"
