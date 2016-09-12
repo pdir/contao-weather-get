@@ -33,6 +33,9 @@
 		}
 		
 	},
+	{
+    	"version": "0.8.0"
+	}	
 	"prefer-stable": true,
 	"minimum-stability": "dev"
 }
