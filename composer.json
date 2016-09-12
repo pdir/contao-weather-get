@@ -32,12 +32,11 @@
 			]
 		},
 		"branch-alias": {
-			"dev-master": "0.8.x-dev",
-			"0.8.0" : "0.8.0.x-dev"
+			"dev-master": "0.8.x-dev"
 		},
-		"version": "0.8.0"
+		
 	},
-
+	"version": "0.8.0",
 	"prefer-stable": true,
 	"minimum-stability": "dev"
 }
