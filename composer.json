@@ -4,6 +4,7 @@
 	"keywords":["contao", "composer","weather","wetter","yahoo weather","openweathermap","forecast.io"],
 	"type":"contao-module",
 	"license":"MIT",
+	"tag":"v0.8.0 stable",
 	"authors":[
 		{
 			"name":"Christian Najjar",
