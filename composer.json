@@ -30,9 +30,6 @@
 			"runonce":[
 				"runonce/logger.php"
 			]
-		},
-		"branch-alias": {
-			"dev-master": "0.8.x-dev"
 		}
 		
 	},
