@@ -76,7 +76,8 @@ class OpenWeatherAPI
 			break;
 			case 'Coordinates':
 				//lat / lon Coordinates
-				$coordinates = explode($this->place,',');
+				$coordinates = str_replace(' ', '', $this->place );
+				$coordinates = explode(',',$coordinates);
 				if($coordinates[0]>0){
 					$url= 'http://api.openweathermap.org/data/2.5/'.$type.'?lat='.trim($coordinates[0]," ").'&lon='.trim($coordinates[1]," ").'&appid='.$this->apikey.'&lang='.$this->language.'&units='.$this->unit.$cnt;
 				}else{
