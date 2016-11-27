@@ -28,7 +28,7 @@
 				"src/system/modules/weather-get":"system/modules/weather-get"
 			},
 			"runonce":[
-				"runonce/logger.php"
+				"src/system/modules/weather-get/config/runonce.php"
 			]
 		}
 		
