@@ -1,6 +1,6 @@
 <?php
 
-class changeForecastToDarkSky extends Controller
+class changePlatformDarkSky extends Controller
 {
 
 	public function __construct()
@@ -15,12 +15,12 @@ class changeForecastToDarkSky extends Controller
         {
         	$set = array('platform'=>'darksky');
 		
-		
+
 			$this->Database->prepare('UPDATE tl_weatherget_info %s WHERE platform=?')->set($set)->execute('forecastio');
         }
 	}
 }
 
 
-$objchangeForecastToDarkSky = new changeForecastToDarkSky();
+$objchangeForecastToDarkSky = new changePlatformDarkSky();
 $objchangeForecastToDarkSky->run();
