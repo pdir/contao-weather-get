@@ -23,7 +23,9 @@ class changeForecastToDarkSky extends Controller
 	{
         if ($this->Database->tableExists('tl_weatherget_info'))
         {
-            $this->Database->query("UPDATE tl_weatherget_info SET platform='darksky' WHERE platform='forecastio'");
+        	$set = array('platform'=>'darksky');
+		
+			$this->Database->prepare('UPDATE tl_weatherget_info %s WHERE platform=?')->set($set)->execute('forecastio');
         }
 	}
 }
