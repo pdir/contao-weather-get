@@ -28,6 +28,9 @@ $GLOBALS['BE_MOD']['content']['WeatherGET'] = array(
 $GLOBALS['FE_MOD']['miscellaneous']['WeatherShow'] = 'WeatherGETShow';
 $GLOBALS['TL_CTE']['miscellaneous']['WeatherShow'] = 'WeatherGETShow';
 
+$GLOBALS['TL_MODELS']['tl_weatherget_info'] = 'cnajjar\WeatherGET\WeatherModel';
+
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('cnajjar\WeatherGET\WeatherGETInsert', 'byInsertTag');
 
 if (TL_MODE=="BE") { 
     $GLOBALS['TL_CSS'][] = 'system/modules/weather-get/assets/be.css';

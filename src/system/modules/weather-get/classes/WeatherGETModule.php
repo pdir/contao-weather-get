@@ -19,21 +19,22 @@ class WeatherGETModule extends \Backend {
     public function WeatherLanguageOptions(\Contao\DC_Table $dc)
     {
 
-        //echo"<pre>";var_dump();die;
         if(strpos($dc->getPalette(),"yahooweather")){
             return array('en','de');
         }
         if(strpos($dc->getPalette(),"openweather")){
             return array('de','en','ru','it','es','uk','pt','fr');
         }
-         if(strpos($dc->getPalette(),"forecastio")){
+        if(strpos($dc->getPalette(),"forecastio")){
             return array('de','en','ar','az','be','bs','cz','el','es','fr','hr','hu','id','it','is','kw','nb','nl','pl','pt','ru','sk','sr','sv','tet','tr','uk','x-pig-latin','zh','zh-tw');
         }
-        //echo "<pre>";var_dump($dc);die;
+        if(strpos($dc->getPalette(),"darksky")){
+            return array('de','en','ar','az','be','bs','cz','el','es','fr','hr','hu','id','it','is','kw','nb','nl','pl','pt','ru','sk','sr','sv','tet','tr','uk','x-pig-latin','zh','zh-tw');
+        }
     }
     public function WeatherIdentificationOptions(\Contao\DC_Table $dc)
     {
-        if(strpos($dc->getPalette(),"forecastio")){
+        if((strpos($dc->getPalette(),"forecastio"))||(strpos($dc->getPalette(),"darksky"))){
             return array('Coordinates');
         }else{
             return array('Unique','Name','Coordinates');  
@@ -55,7 +56,10 @@ class WeatherGETModule extends \Backend {
            return $this->getTemplateGroup('mod_wg_openweather');
         }
         if(strpos($dc->getPalette(),"forecastio")){
-           return $this->getTemplateGroup('mod_wg_forecastio');
+           return $this->getTemplateGroup('mod_wg_f');
+        }
+        if(strpos($dc->getPalette(),"darksky")){
+           return $this->getTemplateGroup('mod_wg_d');
         }
         
     }
@@ -68,6 +72,9 @@ class WeatherGETModule extends \Backend {
            return array('1','2','3','4','5');
         }
         if(strpos($dc->getPalette(),"forecastio")){
+           return array('1','2','3','4','5','6','7','8');
+        }
+        if(strpos($dc->getPalette(),"darksky")){
            return array('1','2','3','4','5','6','7','8');
         }
         

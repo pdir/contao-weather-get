@@ -25,7 +25,7 @@ namespace cnajjar\WeatherAPI;
  * @package    Devtools
  */
 
-class ForecastIOWeatherAPI
+class darkskyWeatherAPI
 {
     protected $place;
 	protected $language;

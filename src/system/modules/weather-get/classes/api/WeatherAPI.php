@@ -20,6 +20,7 @@ namespace cnajjar;
 use cnajjar\WeatherAPI\YahooWeatherAPI;
 use cnajjar\WeatherAPI\OpenWeatherAPI;
 use cnajjar\WeatherAPI\ForecastIOWeatherAPI;
+use cnajjar\WeatherAPI\darkskyWeatherAPI;
 
 /**
  * Class WeatherAPI
@@ -69,6 +70,12 @@ class WeatherAPI
         	break;
         	case 'forecastio':
         		$forecast = new \cnajjar\WeatherAPI\ForecastIOWeatherAPI($this->apikey,$this->place,$this->language, $this->unit);
+        		$weatherdata = $forecast->FetchWeather();
+        		$this->cityname = $forecast->FetchName();
+        	break;
+        	case 'darksky':
+        		
+        		$forecast = new \cnajjar\WeatherAPI\darkskyWeatherAPI($this->apikey,$this->place,$this->language, $this->unit);
         		$weatherdata = $forecast->FetchWeather();
         		$this->cityname = $forecast->FetchName();
         	break;

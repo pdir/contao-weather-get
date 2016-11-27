@@ -15,4 +15,4 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['MSC'][''] = '';
+$GLOBALS['TL_LANG']['MSC']['notFound'] = "<strong>Ein Fehler ist aufgetreteten.</strong><br> Das Wetter Modul wurde nicht gefunden";

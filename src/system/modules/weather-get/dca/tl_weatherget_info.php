@@ -98,6 +98,7 @@ $GLOBALS['TL_DCA']['tl_weatherget_info'] = array
 		'default'               => '{title_legend},title,platform;',
 		'openweather'   => '{title_legend},title,platform;{openweather_legend},apikey,idtype,cityid,Language,units,toupdate,weathertype;{template_legend:hide},customTpl;',
 		'forecastio'    => '{title_legend},title,platform;{forecastio_legend},apikey,idtype,cityid,Language,units,toupdate,showdays;{template_legend:hide},customTpl;',
+		'darksky'  	    => '{title_legend},title,platform;{darksky_legend},apikey,idtype,cityid,Language,units,toupdate,showdays;{template_legend:hide},customTpl;',
 		'yahoo'   		=> '{title_legend},title,platform;{yahooweather_legend},idtype,cityid,Language,units,toupdate,showdays;{template_legend:hide},customTpl;'
 	),
 	'subpalettes' => array
@@ -132,7 +133,7 @@ $GLOBALS['TL_DCA']['tl_weatherget_info'] = array
 			'label'     => &$GLOBALS['TL_LANG']['tl_weatherget_info']['platform'],
 			'inputType' => 'select',
 		
-			'options'   => array('openweather','forecastio', 'yahoo'),
+			'options'   => array('openweather','darksky', 'yahoo'),
 			'reference' => &$GLOBALS['TL_LANG']['tl_weatherget_info'],
 			'eval'      => array(
 				'includeBlankOption' => true,

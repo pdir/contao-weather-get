@@ -11,11 +11,13 @@ $GLOBALS['TL_LANG']['tl_weatherget_info']['title'] = array('Titel ', 'Anzuzeigen
 $GLOBALS['TL_LANG']['tl_weatherget_info']['platform'] = array('Platform ', 'Platform auswählen');
 $GLOBALS['TL_LANG']['tl_weatherget_info']['yahoo'] = "Yahoo! Wetter";
 $GLOBALS['TL_LANG']['tl_weatherget_info']['forecastio'] = "forecast.io";
+$GLOBALS['TL_LANG']['tl_weatherget_info']['darksky'] = "Dark Sky";
 $GLOBALS['TL_LANG']['tl_weatherget_info']['openweather'] = "openweathermap.org";
 
 $GLOBALS['TL_LANG']['tl_weatherget_info']['yahooweather_legend'] = "Yahoo Wetter Eintellungen.";
 $GLOBALS['TL_LANG']['tl_weatherget_info']['openweather_legend'] = "openweathermap.org Eintellungen.";
 $GLOBALS['TL_LANG']['tl_weatherget_info']['forecastio_legend'] = "forecast.io Eintellungen.";
+$GLOBALS['TL_LANG']['tl_weatherget_info']['darksky_legend'] = "Dark Sky Eintellungen.";
 
 $GLOBALS['TL_LANG']['tl_weatherget_info']['apikey'] =  array('APIKey','Platform Abhängiger API Schlüssel');
 
@@ -44,3 +46,5 @@ $GLOBALS['TL_LANG']['tl_weatherget_info']['forecast'] = "Wettervorhersage";
 
 $GLOBALS['TL_LANG']['tl_weatherget_info']['template_legend'] = "Template Einstellungen";
 $GLOBALS['TL_LANG']['tl_weatherget_info']['customTpl'] = array('Template','Template auswählen');
+
+
