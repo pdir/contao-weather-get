@@ -15,6 +15,7 @@ class changeForecastToDarkSky extends Controller
         {
         	$set = array('platform'=>'darksky');
 		
+		
 			$this->Database->prepare('UPDATE tl_weatherget_info %s WHERE platform=?')->set($set)->execute('forecastio');
         }
 	}
