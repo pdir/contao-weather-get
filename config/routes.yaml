@@ -1,0 +1,3 @@
+pdir_weather_get.controller:
+  resource: ../src/Controller
+  type: annotation
