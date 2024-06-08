@@ -1,38 +1,63 @@
 {
-	"name":"cnajjar/weather-get",
-	"description":"Contao extension for displaying weather using yahoo / openweathermap / forecast.io ",
-	"keywords":["contao", "composer","weather","wetter","yahoo weather","openweathermap","forecast.io"],
-	"type":"contao-module",
-	"license":"MIT",
-	"authors":[
-		{
-			"name":"Christian Najjar",
-			"email":"info@christian-najjar.de",
-			"homepage":"http://contao.christian-najjar.de",
-			"role":"Developer"
-		}
-	],
-	"require":{
-		"php":">=5.3",
-		"contao/core":">=3.5.1,<5",
-		"contao-community-alliance/composer-plugin": "~2.0"
-	},
-	"replace": {
-		"contao-legacy/weatherGET": "*"
-	},
-
-	
-	"extra":{
-		"contao": {
-			"sources":{
-				"src/system/modules/weather-get":"system/modules/weather-get"
-			},
-			"runonce":[
-				"system/modules/weather-get/config/runonce.php"
-			]
-		}
-		
-	},
-	"prefer-stable": true,
-	"minimum-stability": "dev"
+    "name":"pdir/contao-weather-get",
+    "description":"Contao extension for displaying weather using yahoo / openweathermap / forecast.io ",
+    "keywords":["contao", "composer","weather","wetter","yahoo weather","openweathermap","forecast.io"],
+    "type":"contao-bundle",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Christian Najjar",
+            "email":"info@christian-najjar.de",
+            "homepage":"http://contao.christian-najjar.de",
+            "role":"Developer"
+        },
+        {
+            "name": "pdir GmbH",
+            "homepage": "https://github.com/pdir",
+            "role":"Developer"
+        },
+        {
+            "name":"Mathias Arzberger",
+            "homepage":"https://pdir.de/",
+            "role":"Developer"
+        }
+    ],
+    "require":{
+        "php":"^8.1",
+        "contao/core-bundle":"^4.13 || ^5.3"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pdir\\ContaoWeatherGetBundle\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "php-http/discovery": true
+      }
+    },
+    "extra": {
+        "contao-manager-plugin": "Pdir\\ContaoWeatherGetBundle\\ContaoManager\\Plugin"
+    },
+    "funding": [
+        {
+            "type": "corporate",
+            "url": "https://contao-themes.net/sponsoring.html"
+        }
+    ],
+    "suggest": {
+        "pdir/social-feed-bundle": "The Social Feed Extension shows a user feed from the most popular social networks. / Die Social Feed Erweiterung zeigt einen Feed aus den beliebtesten sozialen\nNetzwerken an.",
+        "contao-themes-net/mate-theme-bundle": "MATE Theme includes all styles for social feed bundle. / MATE Theme enthält Stylesheets für das Social Feed Bundle.",
+        "contao-themes-net/odd-theme-bundle": "ODD Theme includes all styles for social feed bundle. / ODD Theme enthält Stylesheets für das Social Feed Bundle.",
+        "contao-themes-net/nature-theme-bundle": "NATURE Theme includes all styles for social feed bundle. / NATURE Theme enthält Stylesheets für das Social Feed Bundle.",
+        "contao-themes-net/zero-one-theme-bundle": "Show a social feed in the 0.1 Theme. / Zeige einen Social Feed im 0.1 Theme an."
+    }
 }

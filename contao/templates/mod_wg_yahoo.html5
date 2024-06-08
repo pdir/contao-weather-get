@@ -1,0 +1,41 @@
+<?php
+  $GLOBALS['TL_CSS'][] = 'bundles/pdircontaoweatherget/weather_icons/weather_icons/css/weather-icons.min.css';
+  // Weather-ICONS = https://erikflowers.github.io/weather-icons/
+  $GLOBALS['TL_CSS'][] = 'bundles/pdircontaoweatherget/css/theme-simple.css';
+
+  /* ORGINAL Yahoo Weather Icons
+    <img src="http://l.yimg.com/a/i/us/we/52/<?= $weatherdata['weather_id']; ?>.gif">
+  */
+?>
+<div class="yahoo-weather block">
+  <?= $this->title; ?>
+  <h3><?= $this->cityname; ?></h3>
+
+  <?php $weatherdata = $this->weatherinfo[0]; ?>
+  <div class="weatherday">
+    <div class="main-info">
+      <div class="date"><?= date('d.M',$weatherdata['daytime']); ?></div>
+      <div class="icon"><i style="font-size:3em" class="wi wi-yahoo-<?= $weatherdata['weather_id']; ?>"></i></div>
+      <div class="temp"><?= $weatherdata['temp']; ?> <?php if($this->unit == "metric"):?> <i class="wi wi-celsius"></i> <?php endif;?></div>
+      <div class="text"><?= $weatherdata['weather_desc']; ?></div>
+    </div>
+    <div class="extra-info">
+      <div class="humidity"><i class="wi wi-humidity"></i> <?= $weatherdata['humidity']; ?> Luftfeutchtigkeit</div>
+      <div class="maxtemp"><i class="wi wi-thermometer"></i> <?= $weatherdata['maxtemp']; ?><i class="wi wi-celsius"></i>  maximal</div>
+      <div class="mintemp"><i class="wi wi-thermometer-exterior"></i> <?= $weatherdata['mintemp']; ?><i class="wi wi-celsius"></i>  minimal</div>
+      <div class="windspeed"> <?= $weatherdata['speed']; ?> Windgeschwindigkeit</div>
+    </div>
+  </div>
+  <?php for($i=1; $i < count($this->weatherinfo); $i++): ?>
+    <?php $weatherdata = $this->weatherinfo[$i]; ?>
+    <div class="weatherday">
+      <div class="date"><?= date('d.M',$weatherdata['daytime']); ?></div>
+      <div class="icon"><i style="font-size:3em" class="wi wi-yahoo-<?= $weatherdata['weather_id']; ?>"></i></div>
+      <div class="temp"><span class="smallertemp"> <?= $weatherdata['mintemp']; ?> -</span> <?= $weatherdata['temp']; ?> <?php if($this->unit == "metric"):?><i class="wi wi-celsius"></i><?php endif;?></div>
+      <div class="text"><?= $weatherdata['weather_desc']; ?></div>
+    </div>
+  <?php endfor; ?>
+
+  <!-- Using This Module means you HAVE to display the yahoo logo -->
+  <div class="copyright"><a href="https://www.yahoo.com/?ilc=401" target="_blank"><img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/></a></div>
+</div>

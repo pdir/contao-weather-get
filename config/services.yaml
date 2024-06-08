@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    Pdir\ContaoWeatherGetBundle\:
+        resource: ../src/*
+        exclude: '../src/{Model,WeatherGet}'
